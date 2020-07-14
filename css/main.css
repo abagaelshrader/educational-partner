@@ -152,7 +152,7 @@ header .content-wrapper {
   width: 100%;
 }
 header figure {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +188,7 @@ header li {
 
 /* FOOTER STYLES */
 footer {
-  flex-direction: column;
+  /*flex-direction: column;*/
   text-align: center;
 }
 footer .content-wrapper {
@@ -197,31 +197,34 @@ footer .content-wrapper {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
+  /*flex-flow: row wrap;*/
 }
-footer .contact {
-  margin: 0;
-  /*text-align: center;*/
+/*footer .contact {
   display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}*/
+footer a {
+  text-align: center;
 }
-footer p {
-  margin: 0;
-}
-footer h4 {
-  margin-bottom: 20px;
+footer h3 {
+  margin-bottom: 15px;
   margin-top: 0;
+  font-size: 1.5em;
 }
 footer .copyright {
-  margin-bottom: 20px;
+  width: 100%;
   text-align: center;
+  background-color: #456a72;
 }
 footer .contact i {
   font-size: 2em;
   margin-bottom: 20px;
 }
 footer article {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 10px;
+  /*display: flex;
+  justify-content: space-between;*/
 }
 
 /* ------------ MOBILE STYLES - HOMEPAGE ------------ */
@@ -284,13 +287,13 @@ footer article {
 }
 
 /* ABOUT */
-.about {
+.mini-about {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   background-color: #0a353f;/*#2a423a*/
 }
-.about img {
+.mini-about figure img {
   width: 50%;
   margin-bottom: 10px;
   display: flex;
@@ -298,20 +301,20 @@ footer article {
   flex-flow: row wrap;
   align-items: center;
 }
-.about h2 {
+.mini-about h2 {
   margin-bottom: 20px;
   margin-top: 0;
   line-height: 1;
 }
-.about h3 {
+.mini-about h3 {
   width: 55%;/*I put 90%*/
   margin: 20px 0;
 }
-.about p {
+.mini-about p {
   margin-top: 0;
   margin-bottom: 10px;
 }
-.about button {/*I want this to be centered*/
+.mini-about button {/*I want this to be centered*/
   width: 40%;
   padding: 10px 0;
   margin-top: 20px;
@@ -365,7 +368,7 @@ input[type=email] {
   padding: 1em;
 }
 input[type=submit] {
-  width: 40%;
+  width: 50%;
   padding: 10px 0;
   margin-top: 20px;
   background-color: #2a423a;
@@ -387,38 +390,54 @@ input[type=submit] {
 }
 
 /* ------------ MOBILE STYLES - ABOUT PAGE ------------ */
-/* MISSION */
-.mission {
+/* ABOUT */
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
+  background-color: #0a353f;
 }
-.mission .content-wrapper {
+.about .content-wrapper {
   margin-bottom: 36px;
 }
-.mission .content-wrapper h2 {
+.about .content-wrapper h2 {
   margin-top: 0;
   margin-bottom: 20px;
 }
-.mission p {
-  line-height: 1.25em;
+.about figure img {
+  width: 50%;
+  align-content: center;
 }
-/* iFrame Map */
-.map figure {
+.about span {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.4em;
+  padding: 20px 0;
+}
+.about p {
+  line-height: 1.35em;
   width: 100%;
-  height: 0;
-  padding-bottom: 80%; /*keeps the rectangle size proportions intact*/
-  overflow: hidden;
-  position: relative; /*doesn't do anything but allows you to put absolute position in the child div*/
 }
-.map iframe {
-  width: 100%; /*fill entire div width*/
-  height: 100%; /*fill entire div height*/
-  position: absolute;
-  top: 0;
-  left: 0;
+.about button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* ------------ MOBILE STYLES - FAQ PAGE ------------ */
@@ -568,7 +587,7 @@ input[type=submit] {
     justify-content: space-between;
   }
   header figure {
-    width: 28%;
+    width: 50%;
   }
   header nav {
     width: 40%;
@@ -579,8 +598,26 @@ input[type=submit] {
   header nav ul {
     justify-content: space-between;
   }
+
+  /* FOOTER: CONTACT-SECTION*/
+  footer .footer-content {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  footer .contact {
+    margin-bottom: 0;
+  }
+  footer h3 {
+    font-size: 1.5em;
+    width: 100%;
+  }
+  footer .social {
+    width: 35%;
+    justify-content: space-between;
+  }
+
   /*----------- HOMEPAGE -------------*/
-  /* HERO AREA */
+  /* COVER AREA */
   .cover-area {
     min-height: 800px; /*min-height makes the image responsisve*/
   }
@@ -619,66 +656,70 @@ input[type=submit] {
     margin: 0;
   }
 
-  /* REVIEWS */
-  .about .content-wrapper {
+  /* MINI-ABOUT */
+  .mini-about .content-wrapper {
     margin: 40px 0;
   }
-  .about article {
+  .mini-about article {
     display: flex;
     justify-content: space-between;
   }
-  .about img {
+  .mini-about img {
     min-width: 80%;
   }
-  .about h2 {
+  .mini-about h2 {
     width: 85%;
     margin-bottom: 20px;
   }
-  .about article figure,
-  .about article div {
+  .mini-about article figure,
+  .mini-about article div {
     width: 49%;
   }
 
-  /* CONTACT-SECTION*/
-  footer .content-wrapper {
-    width: 65%;
-  }
-  footer .footer-content {
+  /* -------------- ABOUT PAGE ----------- */
+  .about-content {
     display: flex;
     justify-content: space-between;
-    align-items: baseline; /*maybe center once icons are in*/
-    flex-direction: row;
+    flex-flow: column wrap;
   }
-  footer .contact {
-    margin-bottom: 0;
+  .about .content-wrapper {
+    display: flex;
+    flex-flow: column wrap;
   }
-  footer h4 {
-    font-size: 1.5em;
+  .about h2 {
     width: 100%;
   }
-  footer .social {
-    width: 35%;
-    justify-content: space-between;
-  }
-  /* -------------- ABOUT PAGE ----------- */
-  .mission-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .mission-content p {
+  .about figure {
     width: 45%;
   }
-  .map figure {
-    padding-bottom: 45%;
+  .about .about-1 {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
   }
-  .contact-section .content-wrapper h2 {
+  .about .about-1 p {
+    width: 50%;
+    /*padding-left: 40px;*/
+  }
+  .about span {
+    width: 100%;
+    margin-left: 20%;
+    font-size: 2em;
+  }
+  .about .about-2 p {
     width: 100%;
   }
-  .contact-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  .about p {
+    width: 100%;
+  }
+  .about button {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+  }
+  .about h5 {
+    font-size: 1em;
   }
 
   /* --------------- FAQ PAGE -------------- */
@@ -695,6 +736,11 @@ input[type=submit] {
   }
   .faq-content h4 {
     margin-top: 10px;
+    font-size: 1.25em;
+  }
+  .faq-content p, .faq-content li {
+    font-size: 0.9em;
+    line-height: 1.25em;
   }
 }
 @media only screen and (min-width: 1200px) {
