@@ -403,6 +403,7 @@ input[type=submit] {
 }
 .about .content-wrapper h2 {
   margin-top: 0;
+  text-align: center;
   margin-bottom: 20px;
 }
 .about figure img {
@@ -460,6 +461,7 @@ input[type=submit] {
   margin: 0;
   margin-bottom: 15px;
   line-height: 1em;
+  text-align: center;
 }
 .faq h4 ul{
   line-height: 1.3em;
@@ -534,7 +536,7 @@ input[type=submit] {
   font-size: 1.1em;
   line-height: 1.25em;
 }
-.individual-services ul li {
+.individual-services ul {
   font-size: 1.1em;
 }
 
