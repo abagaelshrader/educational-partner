@@ -536,8 +536,8 @@ input[type=submit] {
   font-size: 1.1em;
   line-height: 1.25em;
 }
-.individual-services ul {
-  font-size: 1.1em;
+.individual-services ul li {
+  font-size: 1em;
 }
 
 
@@ -756,6 +756,8 @@ input[type=submit] {
   }
   .about figure {
     width: 45%;
+    display: flex;
+    justify-content: center;
   }
   .about .about-1 {
     display: flex;
